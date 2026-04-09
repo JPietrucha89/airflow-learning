@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: public
+    database: airflow_db
+    schema: public
+    tables:
+      - name: employees
+        description: "Raw employees table loaded by Airflow DAG 06"
+        columns:
+          - name: id
+            description: "Primary key"
+            tests:
+              - unique
+              - not_null
+          - name: name
+            description: "Employee name"
+            tests:
+              - not_null
+          - name: department
+            description: "Employee department"
+            tests:
+              - not_null
+          - name: salary
+            description: "Employee salary"
+            tests:
+              - not_null

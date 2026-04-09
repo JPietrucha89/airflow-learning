@@ -1,0 +1,12 @@
+dbt_project:
+  outputs:
+    dev:
+      dbname: airflow_db
+      host: postgres-learning    # ← changed from localhost
+      pass: airflow_pass
+      port: 5432
+      schema: public
+      threads: 4
+      type: postgres
+      user: airflow_user
+  target: dev
