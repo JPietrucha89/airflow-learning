@@ -66,7 +66,7 @@ with DAG(
         bash_command=f"cd {DBT_PROJECT_DIR} && dbt debug --profiles-dir {DBT_PROFILES_DIR}",
     )
 
-    # Task 2: Test the input data sources
+    # Task 2: Test the input data sources - just run all tests defined in schema.yml / sources.yml files
     dbt_test_sources = BashOperator(
         task_id="dbt_test_sources",
         bash_command=f"cd {DBT_PROJECT_DIR} && dbt test --select source:* --profiles-dir {DBT_PROFILES_DIR}",
