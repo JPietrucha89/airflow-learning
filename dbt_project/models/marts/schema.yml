@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: mart_department_stats
+    columns:
+      - name: department
+        tests:
+          - not_null
+      - name: total_employees
+        tests:
+          - not_null
+      - name: avg_salary
+        tests:
+          - not_null
+      - name: max_salary
+        tests:
+          - not_null
+      - name: min_salary
+        tests:
+          - not_null
+      - name: total_payroll
+        tests:
+          - not_null
+
+  - name: mart_senior_employees
+    columns:
+      - name: employee_id
+        tests:
+          - not_null
+      - name: employee_name
+        tests:
+          - not_null
+      - name: department
+        tests:
+          - not_null
+      - name: salary_usd
+        tests:
+          - not_null
+      - name: salary_after_raise
+        tests:
+          - not_null
